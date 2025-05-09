@@ -1,0 +1,33 @@
+@import '../variables.scss';
+
+.home-page {
+  text-align: center;
+  padding: 20px;
+  font-family: $font-family;
+  color: $text-color;
+
+  .page-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: $primary-color;
+  }
+
+  .car-images {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+    .car-container {
+      position: relative;
+      text-align: center;
+    }
+
+    .car-image {
+      width: 400px;
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  }
+}

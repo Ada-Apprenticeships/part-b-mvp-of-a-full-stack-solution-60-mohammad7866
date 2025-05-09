@@ -1,0 +1,113 @@
+@import '../variables.scss';
+
+.OrderPage {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: $background-light;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px $shadow-color;
+  font-family: $font-family;
+  color: $text-color;
+
+  .header-buttons {
+    @extend .header-buttons-common;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $primary-color;
+  }
+
+  .car-container {
+    width: calc(48% - 20px);
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 5px 10px $shadow-color;
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+      color: $secondary-color;
+    }
+
+    .extra-list {
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      li {
+        margin-bottom: 10px;
+        padding: 10px 15px;
+        background-color: #e3e3e3;
+        border-radius: 5px;
+        box-shadow: 0 5px 10px $shadow-color;
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: translateY(-3px);
+        }
+      }
+      
+      .button {
+        @extend .button-common;
+      }
+    }
+  }
+
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+
+    .popup-content {
+      max-width: 500px;
+      width: 90%;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+      h2 {
+        margin-bottom: 20px;
+        font-size: 28px;
+        color: $primary-color;
+      }
+
+      p {
+        margin-bottom: 20px;
+        font-size: 18px;
+      }
+
+      .button {
+        @extend .button-common;
+      }
+    }
+  }
+}
